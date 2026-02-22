@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<!--This warning will show up when a user clicks on an external link, the link to go to will be stored in the url-->
+
+<style>
+    body {
+        background-color: cadetblue;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 5px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: white;
+    }
+
+    #main {
+        background-color: lightskyblue;
+        border-radius: 20px;
+        padding: 5px;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+    }
+
+    button {
+        color: white;
+        width: 100px;
+        height: 50px;
+        margin: 0 1px;
+    }
+
+    #proceed {
+        background-color: crimson;
+    }
+
+    #cancel {
+        background-color: cornflowerblue;
+    }
+
+    #home {
+        background-color: black;
+    }
+
+    #buttoncontainer {
+        display: flex;
+        padding: 5px;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+    }
+
+</style>
+
+<head>
+    <title>Warning</title>
+</head>
+
+<body>
+    <div id="main">
+
+        <h1>Warning: You are about to leave the site.</h1>
+        <p>Clicking the button below will take you to an external website. Do you wish to proceed?</p>
+        <div id="buttoncontainer">
+
+            <button id="proceed">Proceed</button>
+            <button id="cancel">Cancel</button>
+            <button id="home">Go back to home</button>
+
+        </div>
+
+    </div>
+</body>
+
+
+
+<script>
+    document.getElementById('proceed').addEventListener('click', function() {
+        // Get the URL from the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const url = urlParams.get('url');
+        if (url) {
+            window.location.href = url; // Redirect to the external URL
+        } else {
+            alert('No URL provided.');
+        }
+    });
+
+    document.getElementById('cancel').addEventListener('click', function() {
+        window.history.back(); // Go back to the previous page
+    });
+
+    document.getElementById('home').addEventListener('click', function() {
+        window.location.href = 'index.html'; // Go back to home page
+    });
+</script>
+
+
+
+</html>
