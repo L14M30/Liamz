@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Liamz | Home</title>
+
+        <style>
+
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+
+                /* background */
+                background-image: url(images/SiteBackground.jpg);    
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+
+            #header {
+                display: flex;
+                background-color: #716ad3;
+                padding: 20px;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                margin: auto;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border: 10px solid #8077ff;
+                border-bottom-color: #9b94fd;
+                border-top-color: #9b94fd;
+                color: white;
+            }
+
+            .glass-overlay {
+                position: fixed;       
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                background: rgba(255, 255, 255, 0.05);  
+                backdrop-filter: blur(10px);            
+                -webkit-backdrop-filter: blur(10px);   
+                z-index: 1;                           
+            }
+            .overglass {
+                position: relative;  
+                z-index: 2;
+            }
+
+            #notice {
+                display: flex;
+                background-color: #716ad3;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+                border: 10px solid #8077ff;
+                border-bottom-color: #9b94fd;
+                border-top-color: #9b94fd;
+                color: white;
+                margin: 20px;
+                padding: 5px;
+                border-radius: 20px;
+            }
+
+            .divide {
+                background-color: #716ad3;
+                height: auto;
+                border: 10px solid #8077ff;
+                border-bottom-color: #9b94fd;
+                border-top-color: #9b94fd;
+                border-radius: 20px;
+                margin: 20px;
+            }
+
+            #content {
+                display:flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                padding: 20px;
+                justify-content: center;
+                justify-items: center;
+                box-sizing: border-box;
+                overflow: hidden;
+                border: 10px solid #8077ff;
+                border-bottom-color: #9b94fd;
+                border-top-color: #9b94fd;
+                background-color: #716ad3;
+                margin: 20px;
+                border-radius: 20px;
+            }
+            #card {
+                background-color: #c6a2ff;
+                width: 200px;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                padding: 5px;
+                border-radius: 20px;
+                border: 10px solid #8077ff;
+                border-bottom-color: #9b94fd;
+                border-top-color: #9b94fd;
+                background-color: #716ad3;
+            }
+
+            #card img {
+                width: 100%;
+                height: 160px;
+                object-fit: cover;
+                flex-shrink: 0;
+                border-radius: 10px;
+            }
+
+
+            #card h2 {
+                padding: 5px;
+                margin: 0;
+                text-align: center;
+                text-overflow: ellipsis;
+                justify-content: center;
+                color: white;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="glass-overlay"></div>
+        <div id="header" class="overglass">
+            <h1>Liamz</h1>
+        </div>    
+
+        <hr class="divide">
+
+        <div id="notice" class="overglass">
+            <img src="images/legacy.png" height="auto" width="500px">
+            <h1> Orbit replaces Legacy!</h1>
+            <p>The Legacy version of Liamz has now been retired! Meet the newest version "Orbit", this update makes the webpage look more better than the plain old one! View the Legacy version <a href="https://l14m30.github.io/LegacyLiamz/" target="_blank">here</a></p>
+        </div>
+
+        <hr class="divide">
+
+        <div id="content">
+
+                <a href="https://github.com/L14M30" target="_blank" class="overglass">
+                    <div id="card">
+                        <img src="images/github.png">
+                        <h2>Github</h2>
+                    </div>
+                </a>
+
+                <a href="https://l14m30.github.io/PieEscape/" target="_blank" class="overglass">
+                    <div id="card">
+                        <img src="images/pieescape.png">
+                        <h2>Pie Escape</h2>
+                    </div>
+                </a>
+
+                <a href="voltage/home.html" target="_blank" class="overglass">
+                    <div id="card">
+                        <img src="voltage/images/logo1.png">
+                        <h2>Voltage</h2>
+                    </div>
+                </a>
+
+
+
+        </div>
+        
+        <hr class="divide">
+
+    </body>
+
+</html>
